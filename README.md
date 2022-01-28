@@ -1,5 +1,9 @@
-# Various FastAPI Starter Pack for faster development
+# FastAPI Starter Pack for Fabulous Web Development
 
-## Menu: fastapi, asyncpg, postgresql
-## Menu: + tortoise-orm
-## Menu: + fastapi-users
+## Menu: Vanilla
+ - Fastapi + Uvicorn = Vanilla
+
+
+## Menu: Fabulous
+ - Fastapi + Bulma + Uvicorn = [Fabulous](#) as seen in [Bulmaswatch](https://jenil.github.io/bulmaswatch/default/)
+ - ![Screenshot](screenshot/fullpage.png "Title")
