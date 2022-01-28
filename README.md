@@ -1,5 +1,7 @@
 # fastapi-starter-pack
-FastAPI Starter Pack for faster implementation of fastapi
+Various FastAPI Starter Pack for faster development
 
-# Features
-## From Beginner mode to Advanced Level
+# Various FastAPI Menu as a starter pack
+## Menu: fastapi, asyncpg, postgresql
+## Menu: + tortoise-orm
+## Menu: + fastapi-users
