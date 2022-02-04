@@ -1,7 +1,10 @@
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
+import api as api
 
 app = FastAPI()
+app.mount("/res", StaticFiles(directory="res"), name="res")
 
-@app.get('/')
-def hi():
-    return "{'hi':'this is just plain vanilla fastapi and uvicorn'}"
+
+app.include_router(api.index)
+app.include_router(api.login)
