@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('res', path='css/normalize.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/journal/bulmaswatch.min.css">
+    <link href="{{ url_for('res', path='css/style.css') }}" rel="stylesheet">
+    <title>Video Background Test</title>
+</head>
+<body>
+    <div id="hero">
+
+        <video loop muted autoplay preload="auto">
+            <source src= "{{ url_for('res', path='vid/background.mp4') }}" type="video/mp4" />
+            Your browser tidak mendukung video tag
+        </video>
+
+        <div class="title" style="z-index: 20; color:wheat">
+            How do you explore the ocean?</br>
+            As fast as you can... </br>
+            How do you develop an API? </br>
+            With FastAPI...
+
+        </br></br>
+            
+            <form action="/login">
+                <button class="button is-info is-rounded" 
+            style="z-index: 20;">
+            Get Started</button>
+            </form>
+            
+        </div>
+        
+          
+    </div>
+    <br />
+
+<script src="{{ url_for('res', path='js/object-fit-video.js') }}"></script>
+<script src="{{ url_for('res', path='js/apps.js') }}"></script>
+
+</body>
+</html>
