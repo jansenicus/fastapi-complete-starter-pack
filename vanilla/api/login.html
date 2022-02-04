@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('res', path='css/normalize.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/journal/bulmaswatch.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css" />
+    <link href="{{ url_for('res', path='css/style.css') }}" rel="stylesheet">
+    <title>Video Background Test</title>
+</head>
+<body>
+    <div id="hero">
+
+        <video loop muted autoplay preload="auto">
+            <source src= "{{ url_for('res', path='vid/dashboard-paper.mp4') }}" type="video/mp4" />
+            Your browser tidak mendukung video tag
+        </video>
+
+        <div class="column is-3 is-transparent has-text-centered" style="z-index: 20; color:wheat">
+            
+            <p class="subtitle is-4" style="color:wheat">Please login to proceed.</p>
+            <div class='field'>
+                <div class="control has-icons-left">
+                    <input class="input is-info is-rounded" type="email" placeholder="Email" style="color:teal">
+                    <span class="icon is-small is-left">
+                        <i class="fa fa-envelope"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="field">
+                <div class="control has-icons-left">
+                    <input class="input is-rounded fa fa-envelope" type="password" placeholder="********" required>
+                    <span class="icon is-small is-left">
+                    <i class="fa fa-lock"></i>
+                    </span>
+                </div>
+            </div>
+            <p class="has-text-centered">
+                <a href="/signup" style="color:wheat" >Sign Up</a> &nbsp;·&nbsp; 
+                <a href="#" style="color:wheat" >Forgot Password</a> &nbsp;·&nbsp;
+                <a href="#" style="color:wheat" >Help?</a>
+              </p>
+
+        </div>
+        
+          
+    </div>
+    <br />
+
+<script src="{{ url_for('res', path='js/object-fit-video.js') }}"></script>
+<script src="{{ url_for('res', path='js/apps.js') }}"></script>
+
+</body>
+</html>
