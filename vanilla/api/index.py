@@ -1,7 +1,5 @@
 from . import *
 
-index = APIRouter()
-
-@index.get("/")
+@api.get("/")
 async def home(request: Request, style: str = 'default'):
-	return templates.TemplateResponse("index.html", context = {"request":request, "style": style})
+	return html.TemplateResponse("index.html", context = {"request":request, "style": style})

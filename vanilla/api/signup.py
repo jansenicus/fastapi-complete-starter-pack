@@ -1,7 +1,5 @@
 from . import *
 
-signup = APIRouter()
-
-@login.get("/signup")
+@api.get("/signup")
 async def home(request: Request, style: str = 'default'):
-	return templates.TemplateResponse("signup.html", context = {"request":request, "style": style})
+	return html.TemplateResponse("signup.html", context = {"request":request, "style": style})
