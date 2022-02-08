@@ -1,11 +1,18 @@
-from fastapi import FastAPI
-from fastapi.staticfiles import StaticFiles
-from api import (index, login, signup)
+"""
+main:
+run-single-worker hypercorn serve API app
+"""
+import asyncio, signal, uvloop
+from hypercorn.config import Config
+from hypercorn.asyncio import serve
+from app import API
 
-API = FastAPI()
-API.mount("/res", StaticFiles(directory="res"), name="res")
+config = Config()
+config.bind = ["0.0.0.0:8080"]
+config.use_reloader = True
+config.keyfile = 'certs/key.pem'
+config.certfile = 'certs/cert.pem'
 
-
-API.include_router(index.api)
-API.include_router(login.api)
-API.include_router(signup.api)
+if __name__ == "__main__":
+    uvloop.install()
+    asyncio.run(serve(API, config))
