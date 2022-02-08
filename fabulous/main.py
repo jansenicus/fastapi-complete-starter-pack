@@ -1,8 +1,8 @@
 from fastapi import FastAPI
-from core.settings import config
+from meta import (PROJECT_NAME, PROJECT_VERSION)
 from fastapi.staticfiles import StaticFiles
-from apis.index import index
+from api import index
 
-app = FastAPI(title=config.PROJECT_NAME, version=config.PROJECT_VERSION)
-app.mount("/static", StaticFiles(directory="static"), name="static")
-app.include_router(index)
+API = FastAPI(title=PROJECT_NAME, version=PROJECT_VERSION)
+API.mount("/static", StaticFiles(directory="res"), name="static")
+API.include_router(index.api)

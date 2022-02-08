@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/img/logo_r_resumme.png" type="image/x-icon" />
+    <title>Log In</title>
+    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="{{ url_for('static', path='icons/favicon.ico') }}" type="image/ico">
+<link href="{{ url_for('static', path='css/'+ style +'/bulmaswatch.min.css') }}" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+  </head>
+  <body>
+    <nav class="main-nav navbar is-primary">
+      <div class="container">
+        <div class="navbar-start ">
+          <a class="navbar-item" href="/?style=default">
+            <img src="{{ url_for('static', path='icons/fastapi.svg') }}" " alt="" class="logo">
+            <h1 class="title is-5"> &#xBB; FastAPI + Bulma = Fabulous</h1>
+          </a>
+          <a class="navbar-item " href="/?style=default">Home</a>
+          
+          
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Themes
+            </a>
+            <div class="navbar-dropdown is-boxed">
+              <div class="columns">
+                <div class="column">
+                    <a class="navbar-item " href="/?style=default"> Default </a>
+                    <a class="navbar-item " href="/?style=cerulean"> Cerulean </a>
+                    <a class="navbar-item " href="/?style=cosmo"> Cosmo </a>
+                    <a class="navbar-item " href="/?style=cyborg"> Cyborg </a>
+                    <a class="navbar-item " href="/?style=darkly"> Darkly </a>
+                    <a class="navbar-item " href="/?style=flatly"> Flatly </a>
+                    <a class="navbar-item is-active" href="/?style=journal"> Journal </a>
+                    <a class="navbar-item " href="/?style=litera"> Litera </a>
+                    <a class="navbar-item " href="/?style=lumen"> Lumen </a>
+                    <a class="navbar-item " href="/?style=lux"> Lux </a>
+                    <a class="navbar-item " href="/?style=materia"> Materia </a>
+                </div>
+                <div class="column">
+                    <a class="navbar-item " href="/?style=minty"> Minty </a>
+                    <a class="navbar-item " href="/?style=nuclear"> Nuclear </a>
+                    <a class="navbar-item " href="/?style=pulse"> Pulse </a>
+                    <a class="navbar-item " href="/?style=sandstone"> Sandstone </a>
+                    <a class="navbar-item " href="/?style=simplex"> Simplex </a>
+                    <a class="navbar-item " href="/?style=slate"> Slate </a>
+                    <a class="navbar-item " href="/?style=solar"> Solar </a>
+                    <a class="navbar-item " href="/?style=spacelab"> Spacelab </a>
+                    <a class="navbar-item " href="/?style=superhero"> Superhero </a>
+                    <a class="navbar-item " href="/?style=united"> United </a>
+                    <a class="navbar-item " href="/?style=yeti"> Yeti </a>
+                    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="navbar-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <div class="navbar-end navbar-menu">
+          <a href="https://github.com/jenil/bulmaswatch/stargazers" class="navbar-item">
+          <img src="https://img.shields.io/github/stars/jenil/bulmaswatch.svg" alt="GitHub stars">
+          </a>
+          <a class="navbar-item" href="//github.com/jenil/bulmaswatch/issues" target="_blank"
+          onclick="ga('send', 'event', 'nav', 'click', 'issue');">
+            <i class="fa fa-bug"></i>&nbsp;Report an issue
+          </a>
+          <a class="navbar-item" href="login" target="_blank">Login</a>
+          <a class="navbar-item" href="signup" target="_blank">Sign Up</a>
+        </div>
+      </div>
+    </nav>
+    <div class="columns is-vcentered">
+      <div class="login column is-4 ">
+        <section class="section">
+          <div class="has-text-centered">
+              <img class="login-logo" src="assets/img/logo_r_resumme.png">
+          </div>
+
+          <div class="field">
+            <label class="label">Username</label>
+            <div class="control has-icons-right">
+              <input class="input" type="text" placeholder="enter username here">
+              <span class="icon is-small is-right">
+                <i class="fa fa-user"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Password</label>
+            <div class="control has-icons-right">
+              <input class="input" type="password" placeholder="******">
+              <span class="icon is-small is-right">
+                <i class="fa fa-key"></i>
+              </span>
+            </div>
+          </div>
+          <div class="has-text-centered">
+            <a class="button is-vcentered is-primary is-outlined">Login</a>
+          </div>
+          <div class="has-text-centered">
+            <a href="signup.html"> Don't you have an account? Sign up now!</a>
+          </div>
+        </section>
+      </div>
+      <div id="particles-js" class="interactive-bg column is-8">
+      </div>
+    </div>
+
+  </body>
+</html>
+
