@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="{{ url_for('res', path='css/bulmaswatch.min.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Vanilla Users</title>
+  </head>
+
+  <body>
+    <section class="hero is-primary">
+      <div class="hero-body has-text-centered">
+        <h1 class="title">FastAPI</h1>
+        <h3 class="subtitle">Empowering Fast API Development</h3>  
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="column is-6 is-offset-3">
+        <div id="message">{{msg}}</div>
+        <form class="box is-rounded" id="form" method="post" action = '/auth/register'>
+          <h3 class="title has-text-black">Register</h3>
+          <hr class="login-hr" />
+
+          <div class="field">
+            <div class="control has-icons-left">
+              <input
+                class="input is-large is-rounded"
+                type="email"
+                name="email"
+                placeholder="Email"
+                required=""
+                autofocus=""
+              />
+              <span class="icon is-small is-left">
+                <i class="fa fa-envelope"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="field">
+            <p class="control has-icons-left">
+              <input
+                class="input is-large is-rounded"
+                type="password"
+                placeholder="Enter Password"
+                required=""
+              />
+              <span class="icon is-left"><i class="fa fa-key"></i></span>
+            </p>
+          </div>
+
+          <div class="field">
+            <p class="control has-icons-left">
+              <input
+                class="input is-large is-rounded"
+                type="password"
+                name="password"
+                placeholder="Reenter Password"
+                required=""
+              />
+              <span class="icon is-left"><i class="fa fa-key"></i></span>
+            </p>
+          </div>
+
+          <input type="hidden" name="is_active" value="true" />
+          <input type="hidden" name="is_superuser" value="false" />
+          <input type="hidden" name="is_verified" value="false" />
+          <div class="field has-addons">
+            <p class="control">
+              <button class="button is-large" id="btn_register" type="submit">
+                Register
+              </button>
+            </p>
+          </div>
+        </form>
+
+        <div class="field has-addons">
+          <p class="control">
+            <a href="/auth/jwt/login" class="button">Login</a>
+          </p>
+          <p class="control">
+            <a href="/auth/register" class="button">Reset Password</a>
+          </p>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="content has-text-centered is-primary">
+          <p>(c) 2022 All Rights Reserved</p>
+        </div>
+      </footer>
+    </div>
+    <script src="{{ url_for('res', path='js/post.js') }}">
+      
+      
+    </script>
+  </body>
+</html>
