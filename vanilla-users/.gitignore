@@ -1,2 +1,5 @@
 Pipfile
 Pipfile.lock
+test.db
+test.db-shm
+test.db-wal
