@@ -1,7 +1,5 @@
 # FastAPI Starter Pack for Fabulous Web Development
 
-# Vanilla Users
-
 ## Vanilla FastAPI with User Management Features
 - `https` enabled by default
 - `HTTP/1.1` and `HTTP/2` support when using `hypercorn` server
