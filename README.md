@@ -7,6 +7,8 @@
 - User Management with `fastapi_users` 
 - Check here for [vanilla-users](vanilla-users/README.md)
 
+- ![Screenshot](screenshot/Screenshot-Vanilla.png "Vanilla FastAPI")
+
 
 ## Vanilla FastAPI Features
 - `https` enabled by default
@@ -22,5 +24,5 @@
 
   - Check here for [fabulous](fabulous/README.md)
 
- - ![Screenshot](screenshot/fullpage.png "Title")
+ - ![Screenshot](screenshot/fullpage.png "Fabulous")
 
