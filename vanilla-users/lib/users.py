@@ -11,18 +11,23 @@ from fastapi_users.db import TortoiseUserDatabase
 
 from lib.db import get_user_db
 from lib.models import User, UserCreate, UserDB, UserUpdate
+from api.sendmail import EmailSchema, send_mail
 
 SECRET = "SECRET"
 
 
 class UserManager(BaseUserManager[UserCreate, UserDB]):
-    
+
     user_db_model = UserDB
     reset_password_token_secret = SECRET
     verification_token_secret = SECRET
 
     async def on_after_register(self, user: UserDB, request: Optional[Request] = None):
-        print(f"User {user.id} has registered. Kirim E-mail Verification")
+        print(f"User {user.id} has registered. Send E-mail")
+        mail = {'subject': 'Welcome to Our Portal',
+                'recipients': [user.email],
+                'body': {'first_name': 'User'}}
+        await send_mail(EmailSchema(**mail))
 
     async def on_after_forgot_password(
         self, user: UserDB, token: str, request: Optional[Request] = None
@@ -32,7 +37,8 @@ class UserManager(BaseUserManager[UserCreate, UserDB]):
     async def on_after_request_verify(
         self, user: UserDB, token: str, request: Optional[Request] = None
     ):
-        print(f"Verification requested for user {user.id}. Verification token: {token}")
+        print(
+            f"Verification requested for user {user.id}. Verification token: {token}")
 
 
 async def get_user_manager(user_db: TortoiseUserDatabase = Depends(get_user_db)):
