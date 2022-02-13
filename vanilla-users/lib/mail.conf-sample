@@ -1,0 +1,6 @@
+MAIL_USERNAME = "superadmin@example.com"
+MAIL_PASSWORD = "supersecretpassword"
+MAIL_FROM = "superadmin@example.com"
+MAIL_PORT = 587
+MAIL_SERVER = "smtp.example.com"
+MAIL_FROM_NAME="Super Administrator"
