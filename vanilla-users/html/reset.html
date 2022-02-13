@@ -1,86 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %} {% block title %}Registration{% endblock %} {% block
+html_head %} {% endblock %} {% block content %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="{{ url_for('res', path='css/bulmaswatch.min.css') }}" rel="stylesheet">
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-  <title>Olympus Drive</title>
-</head>
+<div class="container">
+  <div class="column is-6 is-offset-3">
+    <form class="box is-rounded" id="form">
+      <h3 class="title has-text-black">Reset</h3>
+      <hr class="login-hr" />
 
-<body >
-  <section class="hero is-primary">
-    <div class="hero-body has-text-centered">
-      <h1 class="title">FastAPI</h1>
-      <h3 class="subtitle">Empowering Fast API Development</h3>
-    </div>
-  </section>
-
-  <div class="container">
-
-    <div class="column is-6 is-offset-3 ">
-
-      <form class="box is-rounded">
-        <h3 class="title has-text-black">Reset</h3>
-        <hr class="login-hr">
-
-        <div class="field">
-          <div class="control has-icons-left">
-            <input class="input is-large is-rounded" type="email" placeholder="Email" required="" autofocus="">
-            <span class="icon is-small is-left">
-              <i class="fa fa-envelope"></i>
-            </span>
-          </div>
+      <div class="field">
+        <div class="control has-icons-left">
+          <input
+            class="input is-large is-rounded"
+            type="email"
+            placeholder="Email"
+            required=""
+            autofocus=""
+          />
+          <span class="icon is-small is-left">
+            <i class="fa fa-envelope"></i>
+          </span>
         </div>
-
-
-        <div class="field has-addons">
-          <p class="control">
-            <a class="button is-static is-large">
-              <img width="250" height="100" src="https://fastapi-admin-pro.long2ice.io/admin/captcha?width=200"
-                alt="captcha" id="captcha">
-            </a>
-          </p>
-          <p class="control has-icons-left">
-            <input class="input is-large" required="" placeholder="Enter captcha" name="captcha" type="text"
-              autocomplete="off">
-            <span class="icon is-left"><i class="fa fa-shield-alt"></i></span>
-          </p>
-        </div>
-
-        <div class="field has-addons">
-          <p class="control">
-            <button class="button is-large">Reset</button>
-          </p>
-
-
-
-        </div>
-
-      </form>
+      </div>
 
       <div class="field has-addons">
         <p class="control">
-          <a href="/auth/jwt/login" class="button">Login</a>
+          <a class="button is-static is-large">
+            <img
+              width="250"
+              height="100"
+              src="https://fastapi-admin-pro.long2ice.io/admin/captcha?width=200"
+              alt="captcha"
+              id="captcha"
+            />
+          </a>
         </p>
+        <p class="control has-icons-left">
+          <input
+            class="input is-large"
+            required=""
+            placeholder="Enter captcha"
+            name="captcha"
+            type="text"
+            autocomplete="off"
+          />
+          <span class="icon is-left"><i class="fa fa-shield-alt"></i></span>
+        </p>
+      </div>
+
+      <div class="field has-addons">
         <p class="control">
-          <a href="/auth/register" class="button">Register</a>
+          <button class="button is-large">Reset</button>
         </p>
-    </div>
+      </div>
+    </form>
 
-  </div>
-
-  <footer class="footer">
-    <div class="content has-text-centered is-primary">
-      <p>
-        (c) 2022 All Rights Reserved
+    <div class="field has-addons">
+      <p class="control">
+        <a href="/auth/jwt/login" class="button">Login</a>
+      </p>
+      <p class="control">
+        <a href="/auth/register" class="button">Register</a>
       </p>
     </div>
-  </footer>
   </div>
-</body>
 
-</html>
+  {% endblock %}
+</div>
