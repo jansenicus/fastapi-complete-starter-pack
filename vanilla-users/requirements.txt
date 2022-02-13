@@ -4,3 +4,5 @@ jinja2
 asyncio
 hypercorn[uvloop]
 fastapi-users[tortoise-orm]
+fastapi-mail
+Path
