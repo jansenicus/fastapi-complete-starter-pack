@@ -1,5 +1,5 @@
 from . import *
 
 @api.get("/auth/reset-password")
-async def home(request: Request, style: str = 'default'):
-	return html.TemplateResponse("reset.html", context = {"request":request, "style": style})
+async def home(request: Request):
+	return html.TemplateResponse("reset.html", context = {"request":request})
