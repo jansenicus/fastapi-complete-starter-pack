@@ -1,16 +1,19 @@
 from fastapi_mail import ConnectionConfig
-from path import Path
 from pydantic import (EmailStr, BaseModel)
 from typing import (List, Dict, Any)
+from dotenv import load_dotenv
+from pathlib import Path
+import os
 
+load_dotenv(Path('lib/mail.conf'))
 
 mailconfig = ConnectionConfig(
-    MAIL_USERNAME = "superadmin@example.com",
-    MAIL_PASSWORD = "SUPER_SECRET_PASSWORD",
-    MAIL_FROM = "superadmin@example.com",
-    MAIL_PORT = 587,
-    MAIL_SERVER = "smtp.gmail.com",
-    MAIL_FROM_NAME="Super Administrator",
+    MAIL_USERNAME = os.getenv('MAIL_USERNAME'),
+    MAIL_PASSWORD = os.getenv('MAIL_PASSWORD'),
+    MAIL_FROM = os.getenv('MAIL_FROM'),
+    MAIL_PORT = os.getenv('MAIL_PORT'),
+    MAIL_SERVER = os.getenv('MAIL_SERVER'),
+    MAIL_FROM_NAME=os.getenv('MAIL_FROM_NAME'),
     MAIL_TLS = True,
     MAIL_SSL = False,
     USE_CREDENTIALS = True,
