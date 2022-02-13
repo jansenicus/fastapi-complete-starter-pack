@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="{{ url_for('res', path='css/bulmaswatch.min.css') }}"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+    crossorigin="anonymous"
+  />
+    <title>{% block title %}The Page Title{% endblock %}</title>
+    {% endblock %}
+
+</head>
+<body>
+    <section class="hero is-primary">
+        <div class="hero-body has-text-centered">
+          <h1 class="title">FastAPI</h1>
+          <h3 class="subtitle">Empowering Fast API Development</h3>  
+        </div>
+      </section>
+    <div id="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <footer id="footer">
+        <div class="content has-text-centered is-primary">
+        {% block footer %}
+        &copy; Copyright 2022. All Rights Reserved.
+        {% endblock %}
+        </div>
+    </footer>
+
+{% block js %}
+<script src="{{ url_for('res', path='js/post.js') }}"></script>
+{% endblock %}
+
+</body>
+</html>
