@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
-from api import (index, auth, login, register, reset)
+from api import (index, auth, login, register, reset, mail)
 from fastapi.middleware.cors import CORSMiddleware
 
 
@@ -24,5 +24,7 @@ API.include_router(auth.api)
 API.include_router(login.api)
 API.include_router(register.api)
 API.include_router(reset.api)
+API.include_router(mail.api)
+
 
 
