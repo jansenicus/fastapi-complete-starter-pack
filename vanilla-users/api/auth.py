@@ -1,5 +1,9 @@
 from fastapi import Depends, APIRouter
 from tortoise.contrib.fastapi import register_tortoise
+from fastapi_users.authentication import CookieTransport
+
+cookie_transport = CookieTransport(cookie_max_age=3600)
+
 
 api = APIRouter()
 
